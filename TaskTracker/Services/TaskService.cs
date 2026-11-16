@@ -23,6 +23,19 @@ namespace TaskTracker.Services
             return task;
         }
 
+        public List<TaskItem> GetTasksByPriority(TaskPriority priority)
+        {
+            List<TaskItem> result = new List<TaskItem>();
+            for (int i = 0; i < tasks.Count; i++)
+            {
+                if (tasks[i].Priority == priority)
+                {
+                    result.Add(tasks[i]);
+                }
+            }
+            return result;
+        }
+
         public List<TaskItem> GetAllTasks()
         {
             return tasks;
