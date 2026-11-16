@@ -36,6 +36,13 @@ namespace TaskTracker.Services
             return result;
         }
 
+        public List<TaskItem> SortTasksByPriority(TaskPriority priority)
+        {
+            var result = new List<TaskItem>(tasks);
+            result.Sort();
+            return result;
+        }
+
         public List<TaskItem> GetAllTasks()
         {
             return tasks;
